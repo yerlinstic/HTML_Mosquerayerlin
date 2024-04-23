@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transiciones y Animaciones CSS</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h1><a class="menuButton" href="#" onclick="mostrarImagen('img1')">𝕀𝕟𝕚𝕔𝕚𝕠</a></h1>
+    <img id="img1" src="img/storage/839f6449dbe954a0abe1e092055ca59d.gif" alt="" style="display: none;">
+    
+    <h1><a class="menuButton" href="#" onclick="mostrarImagen('img2')">𝔸𝕔𝕖𝕣𝕔𝕒 𝕕𝕖</a></h1>
+    <img id="img2" src="img/storage/93127cecca2aaa6276ca6afd92ac790d.gif" alt="" style="display: none;">
+    
+    <h1><a class="menuButton" href="#" onclick="mostrarImagen('img3')">𝕍í𝕟𝕔𝕦𝕝𝕠𝕤</a></h1>
+    <img id="img3" src="img/storage/animar-personajes-animaciones-css.gif" alt="" style="display: none;">
+</div>
+
+<script>
+function mostrarImagen(idImagen) {
+    // Ocultar todas las imágenes
+    var imagenes = document.querySelectorAll('.sidebar img');
+    imagenes.forEach(function(img) {
+        img.style.display = 'none';
+    });
+    // Mostrar la imagen correspondiente al enlace clicado
+    var imagen = document.getElementById(idImagen);
+    imagen.style.display = 'block';
+}
+</script>
+
+</body>
+</html>
